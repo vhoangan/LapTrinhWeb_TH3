@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 5</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+	<!-- Ý tưởng: 
+	Xây dựng 1 hàm hiện thị thời gian 
+	cứ 1 giây tự động gọi lại hàm đó 1 lần 
+	-->
+	
+		<script>
+			function ThoiGian()
+			{
+				var hT=new Date();
+				
+				var gio=hT.getHours();
+				var phut=hT.getMinutes();
+				var giay=hT.getSeconds();
+				
+				document.write('Bây giờ là ' +gio+ ':' +phut+ ':' +giay);
+				setTimeout(ThoiGian, 1000);
+			}
+			ThoiGian();
+		</script>		
+	</body>
+</html>
